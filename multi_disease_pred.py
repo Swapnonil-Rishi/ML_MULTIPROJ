@@ -2,17 +2,17 @@
 from fpdf import FPDF
 import pickle
 import streamlit as st
-
-
-heart_model=pickle.load(open('fin_mod_heart.sav','rb'))
-diabe_model=pickle.load(open('fin_mod_diabetes.sav','rb'))
-parkins_model=pickle.load(open('parkinsons_model.sav','rb'))
 st.set_page_config(
     page_title="Disease Predictor",
     page_icon="chart_with_upwards_trend",
     layout="wide",
    
 )
+
+heart_model=pickle.load(open('fin_mod_heart.sav','rb'))
+diabe_model=pickle.load(open('fin_mod_diabetes.sav','rb'))
+parkins_model=pickle.load(open('parkinsons_model.sav','rb'))
+
 
 st.title('Multiple Disease Prediction System')    
 tab1, tab2, tab3 = st.tabs(["Heart Disease Report", "Diabates Report", "Perkinsons Report"],
